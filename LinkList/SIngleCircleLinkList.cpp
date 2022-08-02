@@ -11,10 +11,6 @@ typedef LNode* LinkList;
 
 /**
  * @brief 初始化循环链表 L
- * 
- * @param L 
- * @return true 
- * @return false 
  */
 bool InitList(LinkList &L)
 {
@@ -27,10 +23,6 @@ bool InitList(LinkList &L)
 
 /**
  * @brief 判断循环链表 L 是否为空
- * 
- * @param L 
- * @return true 
- * @return false 
  */
 bool Empty(LinkList L)
 {
@@ -40,17 +32,13 @@ bool Empty(LinkList L)
 
 /**
  * @brief 判断节点 p 是否为循环链表 L 的尾节点
- * 
- * @param L 
- * @param p 
- * @return true 
- * @return false 
  */
 bool isTail(LinkList L, LNode* p)
 {
     if (p->next == L) { return true; }
     else return false;
 }
+
 
 int main()
 {

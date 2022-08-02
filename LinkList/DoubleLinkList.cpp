@@ -35,8 +35,6 @@ bool Empty(const DLinkList& L)
  * 
  * @param p 双链表节点 p
  * @param s 双链表节点 s
- * @return true 
- * @return false 
  */
 bool InsertNextNode(DLinkNode *p, DLinkNode *s)
 {
@@ -53,10 +51,6 @@ bool InsertNextNode(DLinkNode *p, DLinkNode *s)
 
 /**
  * @brief 删除节点 p 的后续节点
- * 
- * @param p 
- * @return true 
- * @return false 
  */
 bool DeleteNextDNode(DLinkNode *p)
 {
@@ -73,8 +67,6 @@ bool DeleteNextDNode(DLinkNode *p)
 
 /**
  * @brief 清空销毁双链表 L
- * 
- * @param L 
  */
 void DestroyList(DLinkList &L)
 {
