@@ -44,7 +44,7 @@ bool Empty(SqStack &S)
     return false;
 }
 
-int main()
+void TestStack()
 {
     int i = 0;
     int m = 0;
