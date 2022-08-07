@@ -21,6 +21,7 @@ bool Push(SqStack &S, Elemtype e)
 
     S.top += 1;
     S.Stack[S.top] = e;
+    cout << "pushing " << e << endl;
     // S.Stack[++S.top] = e;
 
     return true;
