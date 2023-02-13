@@ -58,7 +58,7 @@ bool DeleteNextDNode(DLinkNode *p)
     DLinkNode *q = p->next;
     if (q == nullptr) { return false; }
 
-    p.next = q->next;
+    p->next = q->next;
     if(q->next != nullptr) {q->next->prior = p;}
 
     delete q;
@@ -75,6 +75,36 @@ void DestroyList(DLinkList &L)
     L = nullptr;
 }
 
+/* 此代码仅适用于头尾节点相连的带头节点的双链表
+void Exchange_DLinkList(DLinkList Head)
+{
+    DLinkList p, q, tail;
+    int count = 0;
+    p = Head;
+    tail = Head->prior;
+    while (p != tail)
+    {
+        if (count % 2 != 0)
+        {
+            p = p->next;
+            count++;
+        }
+        else
+        {
+            q = p;
+            p = p->next
+            q->prior->next = q->next;
+            q->next->prior = q->prior;
+            q->next = tail->next;
+
+            q->prior =tail;
+            tail->next->prior = q;
+            tail->next = q;
+        }
+    } 
+}
+*/
+
 int main()
 {
     DLinkNode* node1 = new DLinkNode;
@@ -88,5 +118,6 @@ int main()
     InsertNextNode(node1, node2);
     InsertNextNode(node1, node3);
 
-    cout << node1->next->data << " " << node1->next->next->data;
+    Exchange_DLinkList(node1);
+    
 }
